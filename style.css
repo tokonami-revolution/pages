@@ -1,0 +1,976 @@
+/*-------------------- CSS Reset ----------------------*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+button {
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*-------------------- Typography ----------------------*/
+
+@font-face {
+    font-family: "ModernDOS8x8";
+    src: url("assets/ModernDOS8x8.ttf");
+}
+
+@font-face {
+    font-family: "ModernDOS9x16";
+    src: url("assets/ModernDOS9x16.ttf");
+}
+
+:root {
+    font-family: "ModernDOS9x16", monospace;
+    color: var(--txt-color);
+    font-size: 14.5px;
+    --type-9pt: 0.7rem;
+    --type-10pt: 0.85rem;
+    --type-11pt: 0.925rem;
+    --type-12pt: 1rem;
+    --type-13pt: 1.0625rem;
+    --type-14pt: 1.125rem;
+    --type-16pt: 1.3rem;
+    --type-17pt: 1.4rem;
+    --type-18pt: 1.5rem;
+    --type-20pt: 1.625rem;
+    --type-22pt: 1.83rem;
+    --type-24pt: 2rem;
+    --type-26pt: 2.16rem;
+    --type-28pt: 2.32rem;
+    --type-30pt: 2.5rem;
+    --type-35pt: 2.9rem;
+    --type-40pt: 3.3rem;
+    --type-45pt: 3.75rem;
+    --type-48pt: 4rem;
+    --type-50pt: 4.2rem;
+    --type-55pt: 4.6rem;
+    --type-60pt: 5rem;
+    --type-65pt: 5.4rem;
+    --type-70pt: 5.8rem;
+    --type-80pt: 6.7rem;
+    --type-90pt: 7.5rem;
+    --type-100pt: 8.3rem;
+    --type-120pt: 10rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+    font-family: "ModernDOS8x8", monospace;
+    font-size: var(--type-65pt);
+    line-height: 1em;
+    text-transform: uppercase;
+}
+
+.body-text,
+.setting-grid {
+    font-size: var(--type-20pt);
+    line-height: 1em;
+}
+
+.toko-badge {
+    font-family: "ModernDOS8x8", monospace;
+    font-size: var(--type-40pt);
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: var(--type-30pt);
+    text-transform: uppercase;
+}
+
+.page-controls {
+    font-size: var(--type-20pt);
+}
+
+.page-controls button {
+    font-size: var(--type-24pt);
+}
+
+.combo-add,
+.combo img {
+    font-size: var(--type-60pt);
+}
+
+.combo-subtitle {
+    font-size: var(--type-16pt);
+}
+
+.merge-result {
+    font-size: var(--type-50pt);
+}
+
+.merge-result span:nth-child(2) {
+    font-size: var(--type-30pt);
+}
+
+.combo-subtitle,
+.merge-result span {
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+
+/*------------- Graphic design + Layout ---------------*/
+
+:root {
+    --bg-color: black;
+    --txt-color: white;
+    --main-pad: 50px;
+}
+
+section {
+    background-color: var(--bg-color);
+    background-size: cover;
+    background-position: center center;
+    overflow-x: hidden;
+    /* min-height: 99vh; */
+}
+
+section,
+img {
+    image-rendering: pixelated;
+    max-width: 100%;
+    vertical-align: top;
+}
+
+img.vector-img {
+    image-rendering: auto;
+}
+
+section#title {
+    background-image: url("assets/night-toko.png");
+    background-position: center bottom;
+}
+
+section#factions {
+    background-image: url("assets/hieroglyphs.png");
+}
+
+section#tokonomics {
+    background-image: url("assets/toko-city.png");
+}
+
+section#merge-combos {
+    background-image: url("assets/banner-inner-city.png");
+}
+
+section.underlay {
+    position: relative;
+}
+
+section.underlay::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    opacity: 0.5;
+}
+
+section.underlay-60-op::before {
+    opacity: 0.6;
+}
+
+section.underlay-80-op::before {
+    opacity: 0.8;
+}
+
+section.underlay-90-op::before {
+    opacity: 0.9;
+}
+
+.section-wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--main-pad);
+    min-height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+
+/*------------ Title section ----------*/
+
+h1 {
+    display: none;
+}
+
+.title-figure {
+    text-align: center;
+}
+
+img.title-img {
+    width: 80%;
+}
+
+
+/*------------ Setting section ----------*/
+
+.setting-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    row-gap: 20px;
+}
+
+.page-controls {
+    grid-column: 2;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.page-controls>span {
+    margin: 0 1em;
+}
+
+.page-controls button {
+    transform: translateX(0);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.page-controls button:hover {
+    color: lightskyblue;
+}
+
+#prev-page:hover {
+    transform: translateX(-2px);
+}
+
+#next-page:hover {
+    transform: translateX(2px);
+}
+
+.body-text p {
+    margin-bottom: 0.8em;
+}
+
+.body-text p:last-child {
+    margin-bottom: 0;
+    display: inline;
+}
+
+
+/*------------ Factions section ----------*/
+
+.factions-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    column-gap: 3%;
+}
+
+@media screen and (max-aspect-ratio: 1804/1217) {
+    .factions-grid {
+        flex-grow: 1;
+        grid-template-rows: auto 1fr auto auto auto 1fr;
+    }
+}
+
+#factions-heading,
+#tokonomics-heading,
+#combos-heading {
+    width: max-content;
+    height: max-content;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+#combos-heading {
+    margin-bottom: 0;
+}
+
+#factions-heading::before,
+#factions-heading::after,
+#tokonomics-heading::before,
+#tokonomics-heading::after,
+#combos-heading::before,
+#combos-heading::after {
+    content: '';
+    border-top: 2px solid white;
+    display: block;
+    position: absolute;
+    width: 100vw;
+    top: calc(50% - 2px);
+}
+
+#factions-heading::before,
+#tokonomics-heading::before,
+#combos-heading::before {
+    right: 100%;
+    margin-right: 0.2em;
+}
+
+#factions-heading::after,
+#tokonomics-heading::after,
+#combos-heading::after {
+    left: 100%;
+    margin-left: 0.2em;
+}
+
+#factions-heading {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 1.2em;
+}
+
+.cover-image {
+    object-fit: cover;
+}
+
+.toko-badge {
+    display: flex;
+    align-items: center;
+    grid-column: 2;
+    padding-left: 0;
+    transition: padding-left 0.3s;
+    padding-bottom: 1.5em;
+}
+
+.toko-badge:nth-child(2) {
+    grid-row: 3;
+}
+
+.toko-badge:nth-child(3) {
+    grid-row: 4;
+}
+
+.toko-badge:nth-child(4) {
+    grid-row: 5;
+}
+
+.toko-badge img {
+    height: 3em;
+    margin-right: 1em;
+    filter: drop-shadow(0 0 0.2em transparent);
+    transition: filter 0.3s;
+}
+
+.tokonamis {
+    position: relative;
+    grid-row: 1 / span 6;
+    display: grid;
+    grid-column: 1;
+    /* overflow: hidden; */
+    align-items: end;
+}
+
+.tokonamis figure {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    right: 112%;
+    transition: right 0.3s, bottom 0.3s;
+}
+
+.tokonamis img {
+    max-width: unset;
+    width: 112%;
+    max-height: 93vh;
+    object-fit: contain;
+}
+
+.tokonamis figure:last-of-type {
+    right: 5%;
+}
+
+.toko-badge:hover {
+    padding-left: 15px;
+    cursor: default;
+}
+
+.toko-badge:hover img {
+    filter: drop-shadow(0 0 0.2em white);
+}
+
+.toko-badge:hover~.tokonamis figure:last-of-type {
+    right: 112%;
+}
+
+#amphibian-badge:hover~.tokonamis #amphibian-toko,
+#ground-badge:hover~.tokonamis #ground-toko,
+#air-badge:hover~.tokonamis #air-toko {
+    right: 5%;
+}
+
+
+/*------------ Tokonomics section ----------*/
+
+.tokonomics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+}
+
+.tokonomics-diagram {
+    position: relative;
+}
+
+.tokonomics-diagram img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+}
+
+
+/*------------ Merge Combos section ----------*/
+
+#combos-heading {
+    align-self: center;
+}
+
+.combo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px;
+    padding-top: 0;
+    margin-top: 15px;
+}
+
+.combo:nth-last-child(2) {
+    margin-bottom: 20px;
+}
+
+.combo-mix {
+    display: grid;
+    grid-template-columns: repeat(5, min-content);
+    align-items: center;
+    column-gap: 30px;
+    padding-top: 15px;
+    row-gap: 15px;
+}
+
+.combo-subtitle {
+    grid-column: span 5;
+    text-align: center;
+}
+
+.combo-mix img {
+    height: 0.8em;
+    width: 0.8em;
+    object-fit: contain;
+    object-position: center center;
+    max-width: unset;
+}
+
+.combo-arrow {
+    height: 0.7em;
+    margin-top: -0.2em;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.combo-mix figure {
+    padding: 15px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='30' ry='30' stroke='white' stroke-width='5' stroke-dasharray='15' stroke-dashoffset='6'/%3e%3c/svg%3e");
+    border-radius: 30px;
+}
+
+.merge-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 6.2em;
+}
+
+#merge-combos .subtitle {
+    margin-top: 0;
+}
+
+
+/*------------ Credits section ----------*/
+
+.credit-logos {
+    display: flex;
+    max-width: 1500px;
+    gap: 5%;
+    margin: 0 auto;
+}
+
+.credits-layout {
+    padding: 15vh var(--main-pad);
+    background-image: url("assets/credits-banner.png");
+    background-size: cover;
+    background-position: center 15%;
+    position: relative;
+}
+
+.credits-layout::before,
+.credits-layout::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 5vh;
+    left: 0;
+}
+
+.credits-layout::before {
+    top: 0;
+    background: linear-gradient( 180deg, black 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.credits-layout::after {
+    bottom: 0;
+    background: linear-gradient( 180deg, rgba(0, 0, 0, 0) 0%, black 100%);
+}
+
+.subtitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin-top: 2.5em;
+}
+
+.subtitle::before,
+.subtitle::after {
+    content: '';
+    background: white;
+    flex-grow: 1;
+    height: 2px;
+}
+
+
+/*------------ Modifiers ----------*/
+
+.no-max-width {
+    max-width: unset;
+}
+
+.higher-max-width {
+    max-width: 2800px;
+}
+
+.no-padding {
+    padding: unset;
+}
+
+.no-top-padding {
+    padding-top: 0;
+}
+
+.no-bottom-padding {
+    padding-bottom: 0;
+}
+
+.no-left-padding,
+.no-left-padding-xs {
+    padding-left: 0;
+}
+
+.no-right-padding {
+    padding-right: 0;
+}
+
+.align-vertical-end {
+    justify-content: flex-end;
+}
+
+.flex-distribute-vertical {
+    justify-content: space-between;
+}
+
+
+/*-------------------------- Responsive ----------------------------*/
+
+@media screen and (max-width: 1499px) {
+    h2 {
+        font-size: var(--type-55pt);
+    }
+    .body-text,
+    .setting-grid {
+        font-size: var(--type-16pt);
+    }
+    .toko-badge {
+        font-size: var(--type-30pt);
+    }
+    .subtitle {
+        font-size: var(--type-24pt);
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    h2 {
+        font-size: var(--type-45pt);
+    }
+    .body-text,
+    .setting-grid {
+        font-size: var(--type-14pt);
+    }
+    .toko-badge {
+        font-size: var(--type-26pt);
+    }
+    .subtitle {
+        font-size: var(--type-20pt);
+    }
+    .merge-result {
+        font-size: var(--type-40pt);
+    }
+    .merge-result span:nth-child(2) {
+        font-size: var(--type-20pt);
+    }
+     :root {
+        --main-pad: 30px;
+    }
+    #factions-heading,
+    #tokonomics-heading {
+        margin-bottom: 0.8em;
+    }
+    #tokonomics .section-wrapper {
+        justify-content: start;
+    }
+    .combo {
+        margin-top: 20px;
+    }
+    .combo:nth-last-child(2) {
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .merge-result {
+        font-size: var(--type-30pt);
+    }
+    .combo-add,
+    .combo img {
+        font-size: var(--type-40pt);
+    }
+    .combo-subtitle {
+        font-size: var(--type-14pt);
+    }
+    #setting-text {
+        height: 30.5em;
+    }
+    .setting-image img {
+        max-width: unset;
+        width: 100%;
+        height: 100%;
+        object-position: right bottom;
+    }
+    .toko-badge {
+        font-size: var(--type-22pt);
+    }
+    .factions-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: unset;
+    }
+    #factions-heading {
+        grid-column: 1 / span 3;
+        grid-row: 1;
+    }
+    .toko-badge:nth-child(2),
+    .toko-badge:nth-child(3),
+    .toko-badge:nth-child(4) {
+        grid-row: 2;
+        grid-column: auto;
+    }
+    .tokonamis {
+        grid-row: 3;
+        grid-column: 1 / span 3;
+        overflow: hidden;
+    }
+    .no-left-padding {
+        padding-left: var(--main-pad);
+    }
+    .tokonamis img {
+        width: 100%;
+        max-height: 65vh;
+    }
+    .tokonamis figure,
+    .tokonamis figure:last-of-type {
+        right: unset;
+        bottom: -100%;
+    }
+    .tokonamis figure:last-of-type {
+        bottom: 0;
+    }
+    .toko-badge:hover~.tokonamis figure:last-of-type {
+        right: unset;
+        bottom: -100%;
+    }
+    #amphibian-badge:hover~.tokonamis #amphibian-toko,
+    #ground-badge:hover~.tokonamis #ground-toko,
+    #air-badge:hover~.tokonamis #air-toko {
+        right: unset;
+        bottom: 0;
+    }
+    .toko-badge {
+        flex-direction: column;
+        text-align: center;
+        line-height: 0.7em;
+    }
+    .toko-badge-name {
+        word-spacing: 999px;
+    }
+    .toko-badge img {
+        margin-right: 0;
+        margin-bottom: 0.6em;
+    }
+    .toko-badge:hover {
+        padding-left: 0;
+        cursor: default;
+    }
+    .combo-arrow {
+        height: 0.5em;
+    }
+    .combo-mix figure {
+        background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='20' ry='20' stroke='white' stroke-width='4' stroke-dasharray='12' stroke-dashoffset='5'/%3e%3c/svg%3e");
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h2 {
+        font-size: var(--type-35pt);
+    }
+    .toko-badge {
+        font-size: var(--type-22pt);
+    }
+    .subtitle {
+        font-size: var(--type-16pt);
+    }
+    .setting-grid {
+        grid-template-columns: 1fr;
+    }
+    #setting-text {
+        height: 23.5em;
+    }
+    .page-controls {
+        grid-column: 1;
+    }
+    .setting-image {
+        height: calc( 92vh - 23.5em - var(--main-pad)*2 - 40px);
+    }
+    .tokonomics-grid {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+    .tokonomics-diagram img {
+        position: static;
+    }
+    #factions-heading,
+    #tokonomics-heading {
+        margin-bottom: 0.5em;
+    }
+    .combo-arrow {
+        display: none;
+    }
+    .combo {
+        flex-direction: column-reverse;
+    }
+    .merge-result {
+        margin-top: 15px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    h2 {
+        font-size: var(--type-28pt);
+    }
+    .body-text,
+    .setting-grid {
+        font-size: var(--type-12pt);
+    }
+    .page-controls {
+        font-size: var(--type-16pt);
+    }
+    .toko-badge {
+        font-size: var(--type-18pt);
+    }
+    .subtitle {
+        font-size: var(--type-12pt);
+    }
+    .merge-result {
+        font-size: var(--type-24pt);
+    }
+    .merge-result span:nth-child(2) {
+        font-size: var(--type-16pt);
+    }
+    .combo-subtitle {
+        font-size: var(--type-12pt);
+    }
+     :root {
+        --main-pad: 15px;
+    }
+    .setting-image {
+        height: calc( 88vh - 27.5em - var(--main-pad)*2 - 40px);
+        min-height: 144px;
+    }
+    #setting-text {
+        height: 27.5em;
+    }
+    #factions-heading,
+    #tokonomics-heading {
+        left: 15px;
+    }
+    .combo-mix {
+        column-gap: 10px;
+    }
+}
+
+@media (hover: none) {
+    #prev-page:hover,
+    #next-page:hover {
+        transform: translateX(0px);
+    }
+    .page-controls button:hover {
+        color: white;
+    }
+}

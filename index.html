@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="theme-color" content="black">
+    <title>Tokonami Revolution</title>
+    <meta name="description" content="A collection of NFT's depicting humans who have transferred their consciousness into mechanical bodies in order to wrest control of the world from the robots who have long dominated them.">
+    <meta name="keywords" content="NFT, Tokonami, Robots">
+    <!-- <meta property="og:image" content="assets/tokonami-social.png" />
+    <meta name="twitter:image" content="assets/tokonami-social.png"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js" integrity="sha512-kfs3Dt9u9YcOiIt4rNcPUzdyNNO9sVGQPiZsub7ywg6lRW5KuK1m145ImrFHe3LMWXHndoKo2YRXWy8rnOcSKg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollify/1.0.21/jquery.scrollify.min.js" integrity="sha512-UyX8JsMsNRW1cYl8BoxpcamonpwU2y7mSTsN0Z52plp7oKo1u92Xqfpv6lOlTyH3yiMXK+gU1jw0DVCsPTfKew==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+</head>
+
+<body>
+    <section id="title" class="underlay underlay-60-op">
+        <div class="section-wrapper">
+            <figure class="title-figure"><img class="title-img" src="assets/tokonami.svg" alt="Tokonami Revolution"></figure>
+            <h1>Tokonami Revolution</h1>
+        </div>
+    </section>
+    <section id="setting">
+        <div class="section-wrapper">
+            <div class="setting-grid">
+                <figure class="setting-image"><img class="cover-image" src="assets/night-toko.png" alt="A Tokonami stares dauntingly at the cityscape, knowing not what the future holds." loading="eager"></figure>
+                <div class="body-text" id="setting-text" data-current-page="1">
+                </div>
+                <div class="page-controls">
+                    <button id="prev-page">&lt;</button>
+                    <span><span id="current-page-indicator">1</span>/7</span>
+                    <button id="next-page">&gt;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="factions" class="underlay underlay-90-op">
+        <div class="section-wrapper higher-max-width no-bottom-padding no-left-padding align-vertical-end">
+
+            <div class="factions-grid">
+                <h2 id="factions-heading">Factions</h2>
+                <div id="amphibian-badge" class="toko-badge">
+                    <figure><img src="assets/amphibian-unit-badge.png" alt="Amphibian Badge" loading="eager"></figure>
+                    <span class="toko-badge-name">Amphibian Unit</span>
+                </div>
+                <div id="ground-badge" class="toko-badge">
+                    <figure><img src="assets/ground-unit-badge.png" alt="Ground Badge" loading="eager"></figure>
+                    <span class="toko-badge-name">Ground Unit</span>
+                </div>
+                <div id="air-badge" class="toko-badge">
+                    <figure><img src="assets/air-unit-badge.png" alt="Air Badge" loading="eager"></figure>
+                    <span class="toko-badge-name">Air Unit</span>
+                </div>
+
+                <div class="tokonamis">
+                    <figure id="amphibian-toko"><img src="assets/amphibian-unit.png" alt="Amphibian Unit Tokonami" loading="eager"></figure>
+                    <figure id="ground-toko"><img src="assets/ground-unit.png" alt="Ground Unit Tokonami" loading="eager"></figure>
+                    <figure id="air-toko"><img src="assets/air-unit.png" alt="Air Unit Tokonami" loading="eager"></figure>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="tokonomics" class="underlay underlay-80-op">
+        <div class="section-wrapper">
+            <h2 id="tokonomics-heading">Tokonomics</h2>
+            <div class="tokonomics-grid">
+                <div class="body-text">
+                    <p>Supply Mini-Toko: 999<br> Nr. of Factions: 3<br> Supply Mega-Toko: 333<br> Price: TBA</p>
+
+                    <p>$OIL: The $OIL token is used to merge 3 mini-tokos of 3 different tribes into 1 mega-toko which will qualify you for revenue sharing upon the launch of the NFT lending platform. Mini-Tokos will not be eligible for revenue sharing.
+                    </p>
+                    <p>The total supply of $OIL is 650k.</p>
+                    <p>The $OIL token is emitted daily, split among all the staked Mini-Tokos with decreasing weekly allocations, starting off with 15555 $OIL in week 1 (≈2222 tokens per day), then decreasing non-linearly week over week, according to the
+                        following formula 15555(Number of weeks^(-0.04)) (eg. 15555(2^(-0.04)) for week 2).</p>
+                    <p>Holders will be able to stake their Mini-tokos for a period of 8 weeks. The staking is locked for 8-week periods, during which you cannot unstake your mini-toko. A staked mini-toko cannot be used for merging into a Mega-Toko.</p>
+                    <p>A liquidity pool for OIL-USDC will be provided.</p>
+                    <p>The price of merging the 3 mini-tokos is 500 $OIL and will stay constant over time.</p>
+                </div>
+                <figure class="tokonomics-diagram"><img class="vector-img" src="assets/tokonomics-diagram.svg" alt="Tokonomics diagram" loading="eager"></figure>
+            </div>
+        </div>
+    </section>
+    <section id="merge-combos" class="underlay underlay-80-op">
+        <div class="section-wrapper no-max-width no-left-padding-xs no-right-padding flex-distribute-vertical">
+            <h2 id="combos-heading">Merge Combinations</h2>
+            <div class="combo">
+                <div class="combo-mix">
+                    <figure>
+                        <img src="assets/air-unit-badge.png" alt="Air Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/amphibian-unit-badge.png" alt="Amphibian Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/ground-unit-badge.png" alt="Ground Unit Badge" loading="eager">
+                    </figure>
+                    <p class="combo-subtitle">Merging of three different factions</p>
+                </div>
+                <img src="assets/arrow.svg" class="combo-arrow vector-img" alt="Merge results in" loading="eager">
+                <div class="merge-result">
+                    <span>Rare</span>
+                    <span>Mega-Toko</span>
+                </div>
+            </div>
+            <div class="combo">
+                <div class="combo-mix">
+                    <figure>
+                        <img src="assets/air-unit-badge.png" alt="Air Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/air-unit-badge.png" alt="Air Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/ground-unit-badge.png" alt="Ground Unit Badge" loading="eager">
+                    </figure>
+                    <p class="combo-subtitle">Merging of two equal and one different faction</p>
+                </div>
+                <img src="assets/arrow.svg" class="combo-arrow vector-img" alt="Merge results in" loading="eager">
+                <div class="merge-result">
+                    <span>Uncommon</span>
+                    <span>Mega-Toko</span>
+                </div>
+            </div>
+            <div class="combo">
+                <div class="combo-mix">
+                    <figure>
+                        <img src="assets/amphibian-unit-badge.png" alt="Amphibian Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/amphibian-unit-badge.png" alt="Amphibian Unit Badge" loading="eager">
+                    </figure>
+                    <span class="combo-add">+</span>
+                    <figure>
+                        <img src="assets/amphibian-unit-badge.png" alt="Amphibian Unit Badge" loading="eager">
+                    </figure>
+                    <p class="combo-subtitle">Merging of three equal factions</p>
+                </div>
+                <img src="assets/arrow.svg" class="combo-arrow vector-img" alt="Merge results in" loading="eager">
+                <div class="merge-result">
+                    <span>Common</span>
+                    <span>Mega-Toko</span>
+                </div>
+            </div>
+            <p class="subtitle">* Rarer Tokos generate higher revshare *</h2>
+        </div>
+    </section>
+    <section id="credits">
+        <div class="section-wrapper no-max-width no-left-padding-xs no-right-padding">
+            <div class="credits-layout">
+                <div class="credit-logos">
+                    <figure><img src="assets/tokonami-revolution-logo.png" alt="Tokonami Revolution Logo" loading="eager"></figure>
+                    <figure><img src="assets/x-logo.png" alt="by" loading="eager"></figure>
+                    <figure><img class="vector-img" src="assets/near-protocol-logo.png" alt="Near Protocol Logo" loading="eager"></figure>
+                </div>
+            </div>
+            <p class="subtitle">Benefactors of the Near Foundation Grant</h2>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
