@@ -237,7 +237,7 @@ h2 {
 }
 
 .combo-subtitle {
-    font-size: var(--type-16pt);
+    font-size: var(--type-12pt);
 }
 
 .merge-result {
@@ -790,9 +790,6 @@ img.title-img {
     .combo-add,
     .combo img {
         font-size: var(--type-40pt);
-    }
-    .combo-subtitle {
-        font-size: var(--type-14pt);
     }
     #setting-text {
         height: 30.5em;
